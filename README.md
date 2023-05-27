@@ -9,5 +9,6 @@ Desarrollar un sistema web con una interfaz de usuario que permite ingresar, mod
 * [ASP.NET MVC 5](https://learn.microsoft.com/en-us/aspnet/mvc/overview/getting-started/introduction/)
 * [ADO .NET](https://learn.microsoft.com/en-us/dotnet/framework/data/adonet/ado-net-overview)
 * [SQL Server](https://learn.microsoft.com/en-us/sql/sql-server/?view=sql-server-ver16)
+* [Stored Procedures](https://learn.microsoft.com/en-us/sql/relational-databases/stored-procedures/stored-procedures-database-engine?view=sql-server-ver16)
 * [WCF](https://learn.microsoft.com/es-es/dotnet/framework/wcf/whats-wcf)
 * [AutoMapper](https://automapper.org/)
