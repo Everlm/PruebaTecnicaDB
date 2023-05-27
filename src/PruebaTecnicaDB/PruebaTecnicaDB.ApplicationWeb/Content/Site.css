@@ -1,0 +1,28 @@
+﻿.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.select-wrapper {
+    position: relative;
+}
+
+    .select-wrapper select {
+        padding-right: 30px; /* Espacio para el ícono de flecha */
+    }
+
+    .select-wrapper i {
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        transform: translateY(-50%);
+        pointer-events: none; /* Evitar que el ícono interfiera con el select */
+    }
+
+div.dataTables_wrapper {
+    width: 100%;
+    margin: 0 auto;
+}

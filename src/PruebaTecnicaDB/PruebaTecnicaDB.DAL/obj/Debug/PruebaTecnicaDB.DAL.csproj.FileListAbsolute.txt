@@ -1,0 +1,6 @@
+C:\Users\Ever\source\repos\PruebaTecnicaDB\PruebaTecnicaDB.DAL\bin\Debug\PruebaTecnicaDB.DAL.dll
+C:\Users\Ever\source\repos\PruebaTecnicaDB\PruebaTecnicaDB.DAL\bin\Debug\PruebaTecnicaDB.DAL.pdb
+C:\Users\Ever\source\repos\PruebaTecnicaDB\PruebaTecnicaDB.DAL\obj\Debug\PruebaTecnicaDB.DAL.csproj.AssemblyReference.cache
+C:\Users\Ever\source\repos\PruebaTecnicaDB\PruebaTecnicaDB.DAL\obj\Debug\PruebaTecnicaDB.DAL.csproj.CoreCompileInputs.cache
+C:\Users\Ever\source\repos\PruebaTecnicaDB\PruebaTecnicaDB.DAL\obj\Debug\PruebaTecnicaDB.DAL.dll
+C:\Users\Ever\source\repos\PruebaTecnicaDB\PruebaTecnicaDB.DAL\obj\Debug\PruebaTecnicaDB.DAL.pdb

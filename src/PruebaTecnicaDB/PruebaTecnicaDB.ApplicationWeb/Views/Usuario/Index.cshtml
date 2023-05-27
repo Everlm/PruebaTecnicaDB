@@ -1,0 +1,76 @@
+﻿@model IEnumerable<PruebaTecnicaDB.ApplicationWeb.UsuarioService.UsuarioDto>
+
+@{
+    ViewBag.Title = "Usuarios registrados";
+}
+
+<style type="text/css">
+</style>
+
+<br />
+<br />
+<div class="card">
+    <div class="card-header">
+        <h6 class="text-center">USUARIOS REGISTRADOS</h6>
+    </div>
+    <div class="card-body">
+        <a class="btn btn-success" href="@Url.Action("Create", "Usuario")">
+            <i class="fa-solid fa-plus"></i> Registrar
+        </a>
+        <hr />
+        <div class="table-responsive-sm">
+            <table class="table" id="userTable">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Fecha de nacimiento</th>
+                        <th>Sexo</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Nombre)
+                            </td>
+                            <td>
+                                @item.FechaNacimiento.ToString("dd/MM/yyyy")
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Sexo)
+                            </td>
+                            <td>
+
+                                <a class="btn btn-warning" href="@Url.Action("Edit", "Usuario", new { id = item.IdUsuario })">
+                                    <i class="fa-solid fa-pen-to-square"></i>
+                                </a>
+
+                                <a class="btn btn-info" href="@Url.Action("Details", "Usuario", new { id = item.IdUsuario })">
+                                    <i class="fa-solid fa-eye"></i>
+                                </a>
+                                <a class="btn btn-danger" href="@Url.Action("Delete", "Usuario", new { id = item.IdUsuario })">
+                                    <i class="fa-solid fa-trash"></i>
+                                </a>
+
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+@section scripts{
+    <script>
+        $(document).ready(function () {
+            $('#userTable').DataTable({
+                language: {
+                    url: "https://cdn.datatables.net/plug-ins/1.12.1/i18n/es-ES.json"
+                },
+            });
+        });
+    </script>
+}

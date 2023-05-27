@@ -1,0 +1,61 @@
+﻿@model PruebaTecnicaDB.ApplicationWeb.UsuarioService.UsuarioDto
+
+@{
+    ViewBag.Title = "Detalle del usuario";
+}
+
+
+<br />
+<br />
+<div class="card">
+    <div class="card-header">
+        <h6 class="text-center">Detalle del usuario</h6>
+    </div>
+    <div class="card-body">
+        <div class="form-container">
+            <div class="form col-6 ">
+                <dl class="dl-horizontal">
+                    <dt>
+                        Nombre
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Nombre)
+                    </dd>
+                    <dt>
+
+                        Fecha de nacimiento
+                    </dt>
+
+                    <dd>
+                        @Model.FechaNacimiento.ToString("dd/MM/yyyy")
+                    </dd>
+                    <dt>
+                        Sexo
+                    </dt>
+
+                    <dd>
+                        @if (Model.Sexo == "F")
+                        {
+                            <p>Femenino</p>
+                        }
+                        else
+                        {
+                            <p>Masculino</p>
+                        }
+                    </dd>
+
+                </dl>
+                <hr />
+                <div class="form-group mt-4">
+                    <a class="btn btn-secondary" href="@Url.Action("Index", "Usuario")">
+                        <i class="fa-solid fa-arrow-left-long"></i> Atras
+                    </a>
+                </div>
+            </div>
+            <br />
+        </div>
+    </div>
+</div>
+
+

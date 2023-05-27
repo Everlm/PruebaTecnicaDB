@@ -1,0 +1,101 @@
+﻿@model PruebaTecnicaDB.ApplicationWeb.UsuarioService.UsuarioDto
+
+@{
+    ViewBag.Title = "Eliminar usuario";
+}
+
+<br />
+<br />
+<div class="card">
+    <div class="card-header">
+        <h6 class="text-center">Eliminar usuario</h6>
+    </div>
+    <div class="card-body">
+        <div class="form-container">
+            <div class="form col-6 ">                
+                <br />
+                <dl class="dl-horizontal">
+                    <dt>
+                        Nombre
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Nombre)
+                    </dd>
+                    <dt>
+                        Fecha de nacimiento
+                    </dt>
+
+                    <dd>
+                        @Model.FechaNacimiento.ToString("dd/MM/yyyy")
+                    </dd>
+
+                    <dt>
+                        Sexo
+                    </dt>
+
+                    <dd>
+                        @if (Model.Sexo == "F")
+                        {
+
+
+                            <p>Femenino</p>
+                        }
+                        else
+                        {
+                            <p>Masculino</p>
+                        }
+                    </dd>
+                </dl>
+                <hr />
+                @using (Html.BeginForm())
+                {
+                    @Html.AntiForgeryToken()
+
+                    <div class="form-group mt-4">
+                        <a class="btn btn-secondary" href="@Url.Action("Index", "Usuario")">
+                            <i class="fa-solid fa-arrow-left-long"></i> Atras
+                        </a>
+                        <button type="submit" class="btn btn-danger"><i class="fa-solid fa-trash"></i> Eliminar</button>
+                    </div>
+                }
+
+            </div>
+            <br />
+        </div>
+    </div>
+</div>
+
+@section scripts {
+    <script>
+        $(function () {
+            $('form').on('submit', function (event) {
+                event.preventDefault();
+
+                if ($(this).valid()) {
+                    var form = this;
+
+                    Swal.fire({
+                        title: '¿Estás seguro?',
+                        text: 'Esta acción eliminará el usuario. ¿Deseas continuar?',
+                        icon: 'question',
+                        showCancelButton: true,
+                        confirmButtonText: 'Sí',
+                        cancelButtonText: 'No'
+                    }).then(function (result) {
+                        if (result.isConfirmed) {
+                            Swal.fire({
+                                title: 'Éxito',
+                                text: 'El usuario se eliminó correctamente',
+                                icon: 'success',
+                                confirmButtonText: 'Aceptar'
+                            }).then(function () {
+                                form.submit();
+                            });
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+}
